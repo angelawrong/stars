@@ -78,7 +78,7 @@ function preload() {
 }
 function setup() {
 	colorMode(HSB, 360, 100, 100, 1);
-	createCanvas(800, 800);
+	createCanvas(800, 1150);
 	background(0, 0, 0, 1);
 	frameRate(24);
 	angleMode(DEGREES);
@@ -124,7 +124,7 @@ function setup() {
 
 function draw(){
 	
-	createCanvas(800, 800);
+	createCanvas(800, 1150);
 	background(0, 0, 0, 1);
 	angleMode(DEGREES);
 	stroke(0, 0, 100, 1);
@@ -183,16 +183,25 @@ function draw(){
 	image(cloud10, (n10 + time*n21)%1375-825, (n20 - time*n21*sqrt(3))%(1375*sqrt(3))+1000);
 	image(girls, 0, 0);
 	
-	fill(0, 0, 100, 1);
+	fill('#0C0C0C');
 	
+	rect(0, 800, 800, 400);
+	
+	fill(0, 0, 100, 1);
 	textSize(16);
-	text('「呀！」', 180, 100);
-	text('「？」', 600, 140);
-	text('「就像看星一樣……', 180, 180);
-	text('明知道世界上看星最好的地方多着，', 190, 220);
-	text('但不代表我就不能喜歡在這片天空裏發現躲在雲後僅餘的星。」', 190, 260);
-	text('「哈哈，自我安慰！」', 488, 300);
-	//text(noise(timeCeil), 200, 250);
+	textAlign(LEFT);
+	
+	text('「呀！」', 0, 900, 800);
+	
+	textAlign(RIGHT);
+	text('「？」', 10, 940, 800);
+	textAlign(LEFT);
+	text('「就像看星一樣……', 0, 980, 800);
+	text('明知道世界上看星最佳的地方多着，', 10, 1020, 800);
+	text('但不代表我就不能喜歡在這片天空裏發現躲在雲後僅餘的星。」', 10, 1060, 800);
+	textAlign(RIGHT);
+	text('「哈哈，自我安慰！」', 10, 1100, 800);
+
 
 
 }
@@ -237,3 +246,4 @@ function mouseReleased(){
 	n33 = random(400);
 
 }
+
